@@ -1,0 +1,7 @@
+[
+  { "firstname": "Juan", "lastname": "Perez", "age": 50, "id": 1 },
+  { "firstname": "Pedro", "lastname": "Gomez", "age": 36, "id": 2 },
+  { "firstname": "Franco", "lastname": "Perez", "age": 20, "id": 3 },
+  { "firstname": "Matias", "lastname": "Gomez", "age": 22, "id": 4 },
+  { "firstname": "Carlos", "lastname": "Gomez", "age": 24, "id": 5 }
+]
