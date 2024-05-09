@@ -1,0 +1,14 @@
+[
+  {
+    "id": "bd7552f6-12af-4b14-a028-56907571301c",
+    "username": "Juan",
+    "email": "juan@mail.com"
+  },
+  {
+    "id": "0737fd6c-7584-4867-b014-be8fc2167903",
+    "firstname": "Juan",
+    "lastiname": "Perez",
+    "email": "jperez@mail.com",
+    "profile": "D:\\CODERHOUSE\\BACKEND\\backend-69900-coderhouse\\08 - ROUTER Y MULTER\\03 - multer\\src\\public\\images\\coder-logo.png"
+  }
+]
