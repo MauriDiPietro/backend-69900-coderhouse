@@ -2,6 +2,9 @@ import { Router } from "express";
 
 const router = Router();
 
+import UserManager from "../manager/user.manager.js";
+const userManager = new UserManager("./src/data/users.json");
+
 router.get('/', (req, res)=>{
     res.render('vista1')
 })
@@ -61,6 +64,15 @@ router.get('/list', (req, res)=>{
 
 router.get('/list2', (req, res)=>{
     res.render('list2', { users })
+})
+
+router.get('/register', (req, res)=>{
+    res.render('formulario')
+})
+
+router.get('/users', async(req, res)=>{
+    const users = await userManager.getUsers();
+    res.render('usuarios', { users })
 })
 
 

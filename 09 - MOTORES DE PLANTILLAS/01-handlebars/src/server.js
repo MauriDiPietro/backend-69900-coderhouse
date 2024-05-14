@@ -2,6 +2,7 @@ import express from 'express';
 import { __dirname } from './path.js';
 import handlebars from 'express-handlebars';
 import viewsRouter from './routes/views.router.js';
+import userRouter from './routes/user.router.js';
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.set('views', `${__dirname}/views`);
 app.set('view engine', 'handlebars');
 
 app.use('/', viewsRouter);
+app.use('/users', userRouter);
 
 const PORT = 8080;
 
