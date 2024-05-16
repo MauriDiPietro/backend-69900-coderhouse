@@ -29,3 +29,7 @@ socket.on('products', (products) =>{
     })
     productsList.innerHTML = infoProducts
 })
+
+socket.on('message', (msg)=>{
+    productsList.innerHTML = msg
+})

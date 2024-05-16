@@ -41,4 +41,10 @@ socketServer.on('connection', (socket)=>{
     socketServer.emit('products', products);
   })
 
+  app.post('/', (req,res)=>{
+    const { message } = req.body;
+    socketServer.emit('message', message);
+    res.send('se envió mensaje al socket del cliente')
+  })
+
 })
