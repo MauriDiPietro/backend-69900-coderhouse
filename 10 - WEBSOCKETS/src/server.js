@@ -1,6 +1,7 @@
 import express from "express";
 import handlebars from "express-handlebars";
 import { __dirname } from "./utils.js";
+import { Server } from 'socket.io';
 
 const app = express();
 app.use(express.json());
@@ -10,6 +11,34 @@ app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");
 app.set("views", __dirname + "/views");
 
-app.listen(8080, () => {
+app.get('/', (req, res)=>{
+  res.render('websocket')
+})
+
+const httpServer = app.listen(8080, () => {
   console.log("Escuchando al puerto 8080");
 });
+
+const socketServer = new Server(httpServer);
+
+const products = [];
+
+socketServer.on('connection', (socket)=>{
+  console.log(`Usuario conectado: ${socket.id}`);
+
+  socket.on('disconnect', ()=>{
+    console.log('Usuario desconectado');
+  })
+
+  socket.emit('saludoDesdeBack', 'Bienvenido a websockets')
+
+  socket.on('respuestaDesdeFront', (message)=>{
+    console.log(message);
+  })
+
+  socket.on('newProduct', (product)=>{
+    products.push(product);
+    socketServer.emit('products', products);
+  })
+
+})
