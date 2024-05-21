@@ -6,4 +6,8 @@ router.get('/', (req, res) => {
     res.render('chat')
 });
 
+router.get('/home', (req, res) => {
+    res.render('home')
+});
+
 export default router;
