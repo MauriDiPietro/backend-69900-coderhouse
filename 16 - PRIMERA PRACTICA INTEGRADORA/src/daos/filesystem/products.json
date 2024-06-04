@@ -1,0 +1,16 @@
+[
+  {
+    "id": "532201b3-f1da-4891-bc3b-62a7ece2ad48",
+    "name": "Yerba Mate Taragüi",
+    "description": "...",
+    "price": 4500,
+    "stock": 50
+  },
+  {
+    "id": "3dd3d26a-a823-4f72-85d6-caf268620535",
+    "name": "Yerba Mate Coder",
+    "description": "...",
+    "price": 4500,
+    "stock": 50
+  }
+]

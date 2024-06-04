@@ -1,0 +1,20 @@
+{
+  "name": "16---primera-practica-integradora",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^7.6.12",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.1"
+  }
+}
